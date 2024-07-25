@@ -58,12 +58,16 @@ function respond()
     {
         ele.classList.remove("incorrect")
         ele.classList.add("correct")
+        showText = "Correct!"
     }
     else
     {
         ele.classList.remove("correct")
         ele.classList.add("incorrect")
+        showText = "Incorrect!"
     }
+    resp = document.getElementById("response")
+    resp.innerHTML = ("<strong>").concat(showText).concat("</strong>")
     document.getElementById("submit").setAttribute("onclick", "")
 }
 function checkResponse()
